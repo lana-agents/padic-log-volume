@@ -1,0 +1,74 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/main/schema/formalization.schema.json
+# formalization.yaml (v0.4): repo-root metadata for this formalization,
+# following https://github.com/mathlib-initiative/formalization.yaml
+
+version: "v0.4"
+
+project:
+  name: "padic-log-volume"
+  description: >-
+    Planned general, Mathlib-style library of the local-field analytic stack presupposed by IUT IV §1
+    (Propositions 1.1-1.4): normalized valuation and ramification data of finite extensions of ℚ_p, convergent
+    p-adic log/exp with their image lattices, tensor normalization in total quotient rings, local different
+    estimates, and normalized additive Haar log-volume.
+    The repository is currently an empty scaffold: no definitions or theorems yet.
+  authors:
+    - "Claude (Anthropic)"
+    - "LANA Project"
+  responsible_maintainers:
+    - "Christian Merten"
+  license: "Apache-2.0"
+
+sources:
+  - title: "Inter-universal Teichmüller Theory IV: Log-volume Computations and Set-theoretic Foundations"
+    authors: ["Shinichi Mochizuki"]
+    id: "Publ. Res. Inst. Math. Sci. 57 (2021), 627-723"
+    type: "article"
+    location: "§1, Propositions 1.1-1.4"
+    note: "Target of the planned library, named in the README goals (the README has no sources section); nothing is formalised yet."
+
+related_formalizations:
+  - id: "https://github.com/lana-agents/iut"
+    relationship: "other"
+    note: "Planned local-field input; iut now constructs what it needs itself (Iut/Concrete/LocalConstruct/) and does not use this repository."
+  - id: "https://github.com/lana-agents/tate-curves-theta"
+    relationship: "other"
+    note: "Lists this repository as a future dependency; does not use it."
+
+classification:
+  arxiv: ["math.NT"]
+  msc2020: ["11S80", "28C10"]
+
+status:
+  scope: "not started (scaffold only)"
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms: []
+  main_results: []
+
+automation:
+  methods:
+    - method: "agent"
+      models: ["claude-opus-5-5"]
+      framework: "Claude Code"
+      tool_setup: >-
+        orchestra for running the agents, taxis for project management, and Claude (Claude Code) as the
+        coding agent; Lean/Lake builds with `lake build --wfail`.
+      prompting_notes: >-
+        Human input consisted of high-level task descriptions and scope decisions.
+  notes: >-
+    Agents were run with orchestra; project management (issues, status) was done in taxis;
+    Claude was the coding agent.
+
+fidelity:
+  divergences: "None yet: nothing has been formalised."
+
+review:
+  status: "agent-reviewed"
+  reviewers: ["Claude (Anthropic)"]
+  notes: >-
+    The formalization has only been reviewed by Claude; it has not been reviewed by a human.
+    The repository is an empty scaffold (a placeholder module with no declarations), so there is
+    nothing to check yet.
+
+acknowledgements: "Built on Mathlib (Apache-2.0)."
