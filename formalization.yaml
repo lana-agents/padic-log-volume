@@ -11,7 +11,8 @@ project:
     (Propositions 1.1-1.4): normalized valuation and ramification data of finite extensions of ℚ_p, convergent
     p-adic log/exp with their image lattices, tensor normalization in total quotient rings, local different
     estimates, and normalized additive Haar log-volume.
-    The repository is currently an empty scaffold: no definitions or theorems yet.
+    Contains the p-adic logarithm and log-shells, the log-lattice bounds of IUT IV Proposition 1.2(i), and
+    trace-duality lemmas for finite Q_p-algebras.
   authors:
     - "Claude (Anthropic)"
     - "LANA Project"
@@ -25,7 +26,7 @@ sources:
     id: "Publ. Res. Inst. Math. Sci. 57 (2021), 627-723"
     type: "article"
     location: "§1, Propositions 1.1-1.4"
-    note: "Target of the planned library, named in the README goals (the README has no sources section); nothing is formalised yet."
+    note: "Proposition 1.2(i) (log lattices) is formalised; Propositions 1.1, 1.3, 1.4 partly (trace duality)."
 
 related_formalizations:
   - id: "https://github.com/lana-agents/iut"
