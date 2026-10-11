@@ -8,19 +8,16 @@ Started 2026-10. The library `PadicLogVolume` contains, with no `sorry`, `axiom`
 
 * `PadicLogVolume/PadicLog.lean` — the `p`-adic logarithm `padicLog` of a complete
   discretely valued field of characteristic `0` (summability, the homomorphism property on the
-  principal units, surjectivity of `a ↦ log (1 + a)` onto a ball by a contraction argument) and
-  the log-shell `logShell k p = (2p)⁻¹·log(1 + 𝔪)` (bounded, containing the ring of integers,
-  equal to it for odd unramified `p`);
-* `PadicLogVolume/LogLattice.lean` — the image lattices of the logarithm with Mochizuki's
-  exponents (IUT IV, Proposition 1.2(i)): `(2p)⁻¹·p^a·𝒪 ⊆ 𝓘 ⊆ (2p)⁻¹·p^{-b}·𝒪` with
-  `a = logLatticeA p e`, `b = logLatticeB p e`, and `(a + b)·log p ≤ 3 + log e`
-  (`= 0` when `p` is odd and `e ≤ p − 2`);
+  principal units, surjectivity of `a ↦ log (1 + a)` onto a ball by a contraction argument, and a
+  uniform bound on `‖log u‖` over the principal units);
 * `PadicLogVolume/TraceDuality.lean` — traces, integral lattices and trace-dual bases in finite
   `ℚ_p`-algebras and their tensor products, the ingredients of the different estimate for tensor
   products of local fields (IUT IV, Proposition 1.1).
 
 These were developed in `lana-agents/iut` (`Iut/Concrete/LocalConstruct/`) and moved here;
-`iut` requires this repository.
+`iut` requires this repository. The IUT-specific material built on them — the log-shell
+`(2p)⁻¹·log(𝒪^×)` (IUT III, Definition 1.1) and the log lattices with Mochizuki's constants
+(IUT IV, Proposition 1.2(i)) — stays in `iut`.
 
 ## Goals
 
